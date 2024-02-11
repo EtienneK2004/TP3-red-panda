@@ -36,7 +36,7 @@ export async function connection() {
         await consumer.run({
             eachMessage: async ({ message}) => {
                 if(message.value) {
-                    const words = message.value.toString().split(' ');
+                    const words = message.value.message.split(' ');
                     words.forEach(async mot => {
                         incrementation(mot);
                     });
