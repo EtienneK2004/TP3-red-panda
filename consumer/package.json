@@ -1,5 +1,5 @@
 {
-  "name": "prod-red-panda",
+  "name": "cons-red-panda",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
@@ -15,6 +15,7 @@
     "dotenv": "^16.3.1",
     "kafkajs": "^2.2.4",
     "lorem-ipsum": "^2.0.8",
+    "redis": "^4.6.13",
     "uuid": "^9.0.0"
   }
 }
