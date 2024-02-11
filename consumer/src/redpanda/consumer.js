@@ -23,7 +23,7 @@ const redisClient = createClient(redisOptions);
 
 
 async function incrementation(mot) {
-    await redisClient.incr(mot);
+    redisClient.incr(mot);
   }
 
 export async function connection() {
@@ -38,7 +38,7 @@ export async function connection() {
                 if(message.value) {
                     const words = message.value.toString().split(' ');
                     words.forEach(async mot => {
-                        await incrementation(mot);
+                        incrementation(mot);
                     });
                 }
                 console.log({
